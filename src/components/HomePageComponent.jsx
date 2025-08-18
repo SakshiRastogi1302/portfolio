@@ -18,7 +18,7 @@ const HomePageComponent = () => {
               </p>
             </div>
             {/* Typewriter for desktop */}
-            <div className="hidden text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-red-400 md:flex flex-wrap md:justify-center lg:justify-start text-center lg:text-left pl-8 lg:pl-16 xl:pl-20 2xl:pl-22 leading-snug">
+            <div className="hidden text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-lime-400 font-bold md:flex flex-wrap md:justify-center lg:justify-start text-center lg:text-left pl-8 lg:pl-16 xl:pl-20 2xl:pl-22 leading-snug">
               <Typewriter
                 options={{
                   strings: [
@@ -34,7 +34,7 @@ const HomePageComponent = () => {
             </div>
             
             {/* Typewriter for mobile */}
-            <div className="md:hidden text-lg tracking-wider flex flex-wrap justify-center text-center text-red-400 font-bold leading-snug">
+            <div className="md:hidden text-lg tracking-wider flex flex-wrap justify-center text-center text-lime-400 font-bold leading-snug">
               <Typewriter
                 options={{
                   strings: [
