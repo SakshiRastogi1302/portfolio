@@ -2,11 +2,11 @@ import React,{useState} from 'react'
 import portfolioNameLogo from "../assets/portfolio-name-logo.png"
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector} from 'react-redux'
-import { toggleMenuButton } from '../reduxStore/hideShowMenuSlice'
+import { toggleMenuButton } from '../redux_store/hideShowMenuSlice'
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsBrightnessHighFill } from "react-icons/bs";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { toggleMode } from '../reduxStore/toggleLightDarkMode'
+import { toggleMode } from '../redux_store/toggleLightDarkMode'
 
 
 const HeaderComponent = () => {
