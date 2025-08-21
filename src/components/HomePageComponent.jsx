@@ -1,12 +1,13 @@
 import React from "react";
 import homePageImage from "../assets/homepage-image.png";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 
 const HomePageComponent = () => {
   return (
     <div className="bg-purple-900 w-full min-h-screen text-white flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 gap-8">
       {/* Text Column */}
-      <div className="flex flex-col justify-center w-full lg:w-1/2 space-y-2 lg:space-y-4 lg:pt-20 xl:pt-12">
+      <div className="flex flex-col justify-center w-full lg:w-1/2 space-y-2 lg:space-y-4 lg:pt-20 xl:pt-16">
         {/* Greeting */}
         <div>
           <span className="font-medium tracking-wider text-xl md:text-2xl lg:text-3xl xl:text-4xl flex justify-center items-center">
@@ -40,11 +41,13 @@ const HomePageComponent = () => {
 
         {/* Intro Paragraph */}
         <p className="md:w-3/4 mx-auto text-base md:text-lg text-justify animate-fadeIn mt-2">
-          Welcome to my frontend development kingdom! I'm a dedicated and
-          innovative frontend developer with a proclivity for constructing sleek
-          and user-friendly interfaces that meet the needs of a diverse online
-          audience.
+         I’m a dedicated and innovative frontend developer passionate about crafting sleek, responsive, and user-friendly web interfaces that deliver seamless digital experiences.
         </p>
+
+        <div className = 'flex flex-col md:flex-row justify-center gap-5 items-center mt-5'>
+          <Link to= "/projects"><button className='w-40 md:w-44 bg-yellow-600 font-medium p-2 rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer border-2 border-white hover:bg-yellow-500 transition-transform'><i className="fa-solid fa-folder-open mr-2"></i>Explore My Work</button></Link>
+          <Link to= "/contact"><button className='w-40 md:w-44 bg-lime-600 p-2 font-medium rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer border-2 border-white hover:bg-lime-500 transition-transform"'><i className="fa-solid fa-phone mr-2"></i> Let's Connect</button></Link>
+        </div>
       </div>
 
       {/* Image Column */}
@@ -52,9 +55,10 @@ const HomePageComponent = () => {
         <img
           src={homePageImage}
           alt="Home Page"
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain -scale-x-100 mt-12 sm:mt-16 md:mt-20 lg:mt-24 xl:mt-28"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg object-contain -scale-x-100 mt-16 sm:mt-20 md:mt-24 lg:mt-28 xl:mt-24"
         />
       </div>
+
     </div>
   );
 };
