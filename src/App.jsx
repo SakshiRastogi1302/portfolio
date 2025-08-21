@@ -2,11 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {Provider} from "react-redux";
 import BodyComponent from "./components/BodyComponent";
 import HomePageComponent from "./components/HomePageComponent";
-import appStore from "./reduxStore/appStore";
+import appStore from "./redux_store/appStore";
 import AboutComponent from "./components/AboutComponent";
 import WorkExperienceComponent from "./components/WorkExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
-import ProjectsComponent from "./components/ProjectsComponent";
+import ProjectListComponent from "./components/ProjectListComponent";
 import ContactComponent from "./components/ContactComponent";
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         },
         {
           path:"/projects",
-          element:<ProjectsComponent />
+          element:<ProjectListComponent />
         },
         {
           path:"/contact",
