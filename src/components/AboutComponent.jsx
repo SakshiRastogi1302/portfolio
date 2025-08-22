@@ -17,7 +17,7 @@ const AboutComponent = () => {
                 <p>I thrive in collaborative environments, working closely with designers and teams to build applications that are not only visually engaging but also high-performing and accessible. Driven by curiosity and growth, I continuously explore modern frontend practices and technologies to deliver innovative and impactful solutions.</p>
               </div>
               <div className='flex justify-center my-6'>
-                <Link to= "https://drive.google.com/uc?export=download&id=1jxCl9jcXlZqBK2hOFD8IJAjOr6-MHMzF" target='_blank' rel='noopener noreferrer'><button title='Download my resume in your local machine' className='w-48 md:w-56 bg-yellow-600 p-2 font-medium rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer border-2 border-white hover:bg-yellow-500 transition-transform'><i className="fa-solid fa-download mr-2"></i>Download My Resume</button></Link>
+                <Link to= "https://drive.google.com/uc?export=download&id=1jxCl9jcXlZqBK2hOFD8IJAjOr6-MHMzF" target='_blank' rel='noopener noreferrer'><button title='Download Resume' className='w-48 md:w-56 bg-yellow-600 p-2 font-medium rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer border-2 border-white hover:bg-yellow-500 transition-transform'><i className="fa-solid fa-download mr-2"></i>Download My Resume</button></Link>
               </div>
           </div>
       </div>
