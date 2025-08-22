@@ -12,7 +12,7 @@ const ProjectComponent = ({projectInfo}) => {
                     <img src={imageURL} alt={'Project'+ projectInfo.id} loading='lazy' className='w-3/4 sm:w-2/3 md:w-1/2 lg:w-[50%] object-contain mt-5 lg:mt-8 mx-auto lg:mx-5 lg:mb-5 shadow-2xl shadow-black rounded-md'/>
                     <div className='flex-1 my-5 px-4 sm:px-6 md:px-8'>
                         <div className='flex flex-col justify-center items-center md:justify-between md:flex-row'>
-                            <p className='text-center text-base md:text-xl lg:text-2xl font-bold text-lime-400 text-shadow-sm text-shadow-black'>{projectName}</p>
+                            <p className='text-center text-base md:text-xl lg:text-2xl font-bold text-black text-shadow-2xs text-shadow-white'>{projectName}</p>
                             <span className={`flex items-center justify-center w-fit text-white mt-2 md:mt-0 px-3 py-1 rounded-full text-[10px] font-medium shadow-sm shadow-black ${statusBg}`}><i className={`${iconClass}`}></i>{projectStatus}</span>
                         </div>
                         {/* Category + Deployment Info */}
