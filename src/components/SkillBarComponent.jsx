@@ -9,7 +9,7 @@ const SkillBarComponent = ({ skill, percentage, color, imageUrl }) => {
         <span>{percentage}%</span>
       </div>
       <div className="w-full h-2 bg-gray-700 rounded-full">
-         <div className={`h-2 rounded-full ${color}`} style={{ width: `${percentage}%` }}></div>
+         <div className={`h-2 rounded-full bg-purple-500`} style={{ width: `${percentage}%` }}></div>
       </div>
     </div>
   )
