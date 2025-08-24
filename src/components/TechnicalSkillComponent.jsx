@@ -17,12 +17,12 @@ const TechnicalSkillComponent = () => {
         <section>
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 border-b-2 border-yellow-400 pb-1">Frontend</h2>
             <div className="space-y-4 shadow-2xl shadow-black bg-black border-2 border-white p-4 rounded-2xl">
-                <SkillBarComponent skill="HTML5" percentage={90} color="bg-lime-400" imageUrl={htmlLogo} />
-                <SkillBarComponent skill="CSS3" percentage={85} color="bg-lime-400" imageUrl={cssLogo}/>
-                <SkillBarComponent skill="JavaScript (ES6+)" percentage={80} color="bg-lime-400" imageUrl={jsLogo} />
-                <SkillBarComponent skill="TypeScript" percentage={75} color="bg-lime-400" imageUrl={typescriptLogo}/>
-                <SkillBarComponent skill="Tailwind CSS" percentage={90} color="bg-lime-400" imageUrl={tailwindcssLogo}/>
-                <SkillBarComponent skill="React.js" percentage={85} color="bg-lime-400" imageUrl={reactLogo}/>
+                <SkillBarComponent skill="HTML5" percentage={90} imageUrl={htmlLogo} />
+                <SkillBarComponent skill="CSS3" percentage={85} imageUrl={cssLogo}/>
+                <SkillBarComponent skill="JavaScript (ES6+)" percentage={80} imageUrl={jsLogo} />
+                <SkillBarComponent skill="TypeScript" percentage={75} imageUrl={typescriptLogo}/>
+                <SkillBarComponent skill="Tailwind CSS" percentage={90} imageUrl={tailwindcssLogo}/>
+                <SkillBarComponent skill="React.js" percentage={85} imageUrl={reactLogo}/>
             </div>
         </section>
 
@@ -30,7 +30,7 @@ const TechnicalSkillComponent = () => {
         <section>
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 border-b-2 border-yellow-400 pb-1">Testing</h2>
             <div className="space-y-4 shadow-2xl shadow-black bg-black border-2 border-white p-4 rounded-2xl">
-                <SkillBarComponent skill="Jest" percentage={70} color="bg-red-400" imageUrl={jestLogo}/>
+                <SkillBarComponent skill="Jest" percentage={70} imageUrl={jestLogo}/>
             </div>
         </section>
 
@@ -38,8 +38,8 @@ const TechnicalSkillComponent = () => {
         <section>
             <h2 className="text-xl md:text-2xl font-semibold text-center mb-4 border-b-2 border-yellow-400 pb-1">Tools & Others</h2>
             <div className="space-y-4 shadow-2xl shadow-black bg-black border-2 border-white p-4 rounded-2xl">
-            <SkillBarComponent skill="GitHub" percentage={85} color="bg-indigo-400" imageUrl={githubLogo}/>
-            <SkillBarComponent skill="VS Code" percentage={90} color="bg-indigo-400" imageUrl={vsCodeLogo}/>
+            <SkillBarComponent skill="GitHub" percentage={85} imageUrl={githubLogo}/>
+            <SkillBarComponent skill="VS Code" percentage={90} imageUrl={vsCodeLogo}/>
             </div>
         </section>
     </div>
