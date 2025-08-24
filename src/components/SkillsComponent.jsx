@@ -6,7 +6,7 @@ const SkillsComponent = () => {
   return (
     <div className="bg-purple-900 w-full min-h-screen text-white flex flex-col items-center py-16 px-6">
         {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl font-el-messiri font-bold tracking-wider animate-moveDown text-shadow-lg text-shadow-black border-b-4 border-yellow-400 pb-1 my-12">Skills</h1>
+        <h1 className="text-3xl sm:text-4xl font-el-messiri font-bold tracking-wider animate-moveDown text-shadow-lg text-shadow-black border-b-4 border-yellow-400 mt-14 mb-10">Skills</h1>
         <div className="w-full max-w-6xl flex flex-col gap-10">
           
           {/* 1. Technical Skills with Progress Bars */}

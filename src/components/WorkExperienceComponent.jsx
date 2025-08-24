@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const WorkExperienceComponent = () => {
   return (
     <section className="bg-purple-900 text-white w-full min-h-screen flex flex-col items-center py-16 px-6">
-      <h2 className="text-3xl sm:text-4xl font-el-messiri font-bold tracking-wider flex-wrap text-center leading-snug animate-moveDown text-shadow-lg text-shadow-black my-10 border-b-4 border-yellow-400">Work Experience</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold tracking-wider flex-wrap text-center leading-snug animate-moveDown text-shadow-lg text-shadow-black my-14 border-b-4 border-yellow-400">Work Experience</h2>
       <div className="w-full max-w-5xl flex flex-col gap-8">
         {workExperienceData.map((exp, index) => (
           <div
