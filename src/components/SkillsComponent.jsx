@@ -1,4 +1,5 @@
 import React from 'react'
+import expressJSLogo from '../assets/express-js-logo.png'
 import TechnicalSkillComponent from './TechnicalSkillComponent'
 
 const SkillsComponent = () => {
@@ -19,6 +20,7 @@ const SkillsComponent = () => {
             <div className="flex justify-center md:justify-start gap-6 shadow-2xl shadow-black bg-black border-2 border-white p-4 rounded-2xl">
               <span className="bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-md"><i className="fa-brands fa-java text-2xl mr-2 text-red-600"></i>Java</span>
               <span className="bg-green-700 text-black px-4 py-2 rounded-lg shadow-md"><i className="fa-brands fa-node-js text-2xl mr-2 text-lime-400"></i>Node.js</span>
+              <span className="bg-pink-700 text-black px-4 py-2 rounded-lg shadow-md flex"><img src={expressJSLogo} className="w-7 text-2xl mr-2 text-black bg-yellow-300 rounded-full p-2"/>ExpressJS</span>
             </div>
           </section>
         </div>
