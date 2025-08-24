@@ -45,7 +45,7 @@ const HomePageComponent = () => {
         </p>
 
         {/* Buttons - Explore my work, Let's connect */}
-        <div className = 'flex flex-col md:flex-row justify-center gap-5 items-center mt-5'>
+        <div className = 'flex flex-col md:flex-row justify-center gap-5 items-center'>
           <Link to= "/projects"><button title="Explore My Projects" className='w-40 md:w-44 bg-yellow-600 font-medium p-2 rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer border-2 border-white hover:bg-yellow-500 transition-transform'><i className="fa-solid fa-folder-open mr-2"></i>Explore My Work</button></Link>
           <Link to= "/contact"><button title="Contact Me" className='w-40 md:w-44 bg-lime-600 p-2 font-medium rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer border-2 border-white hover:bg-lime-500 transition-transform"'><i className="fa-solid fa-phone mr-2"></i> Let's Connect</button></Link>
         </div>
