@@ -8,6 +8,7 @@ import WorkExperienceComponent from "./components/WorkExperienceComponent";
 import SkillsComponent from "./components/SkillsComponent";
 import ProjectListComponent from "./components/ProjectListComponent";
 import ContactComponent from "./components/ContactComponent";
+import ErrorComponent from "./components/ErrorComponent";
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -41,6 +42,7 @@ function App() {
         }
 
       ],
+      errorElement:<ErrorComponent/>
     },
   ]);
   return (
