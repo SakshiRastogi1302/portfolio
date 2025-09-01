@@ -63,6 +63,7 @@ portfolio/
 |   |   ├── ProjectListComponent.jsx
 |   |   └── ContactComponent.jsx
 │   ├── utils/            # Helper functions (theme, API calls, constant data etc.)
+|   ├── redux_store       # Global state management
 │   ├── App.jsx           # Root component
 │   └── main.jsx          # Entry point
 ├── .gitignore
