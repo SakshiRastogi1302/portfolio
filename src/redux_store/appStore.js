@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit"
 import hideShowMenuSlice from "./hideShowMenuSlice"
-import toggleLightDarkMode from "./toggleLightDarkMode"
+import toggleLightDarkModeSlice from "./toggleLightDarkModeSlice"
 
 const appStore = configureStore({
     reducer:{
         menuButton:hideShowMenuSlice,
-        toggleLightDarkMode:toggleLightDarkMode
+        toggleLightDarkMode:toggleLightDarkModeSlice
     }
 })
 
