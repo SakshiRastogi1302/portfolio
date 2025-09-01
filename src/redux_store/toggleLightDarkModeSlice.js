@@ -1,6 +1,6 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice} from "@reduxjs/toolkit";
 
-const toggleLightDarkMode = createSlice({
+const toggleLightDarkModeSlice = createSlice({
     name:"toggleLightDarkMode",
     initialState:{
         currentMode:"light"
@@ -12,5 +12,5 @@ const toggleLightDarkMode = createSlice({
     }
 })
 
-export const {toggleMode} = toggleLightDarkMode.actions;
-export default toggleLightDarkMode.reducer;
+export const {toggleMode} = toggleLightDarkModeSlice.actions;
+export default toggleLightDarkModeSlice.reducer;
