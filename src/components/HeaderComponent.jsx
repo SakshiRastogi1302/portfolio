@@ -25,7 +25,7 @@ const HeaderComponent = () => {
 
   return (
     <div className={currentMode === "dark"?"dark":""}>
-      <div className='w-full h-20 fixed top-0 left-0 flex justify-between items-center px-4 bg-purple-100 text-purple-900 dark:bg-purple-900 dark:text-white z-50'>
+      <div className='w-full h-20 fixed top-0 left-0 flex justify-between items-center px-4 bg-purple-900 dark:bg-purple-300 text-white dark:text-purple-900 z-50'>
         <div className='flex items-center sm:m-2'>
           <Link to='/'><img src={portfolioNameLogo} alt='Portfolio Name Logo' className='h-10 bg-gradient-to-tr from-purple-700 to-yellow-400 rounded-full hover:animate-pulse'></img></Link>
           <Link to='/'><h1 className='px-2 italic hidden lg:block font-medium'>Sakshi Rastogi</h1></Link>
@@ -40,18 +40,18 @@ const HeaderComponent = () => {
               <Link to='/projects' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></Link>
               <Link to='/contact' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></Link>
               <div className="cursor-pointer hover:animate-pulse" onClick={()=>{toggleLightDarkMode()}}>
-                {currentMode === "light"? <MdOutlineDarkMode size={25} color={"purple"}></MdOutlineDarkMode> : <BsBrightnessHighFill size={25} color={currentMode === "light" ?"purple":"yellow"}></BsBrightnessHighFill>}
+                {currentMode === "light"? <MdOutlineDarkMode size={25} color={"white"}></MdOutlineDarkMode> : <BsBrightnessHighFill size={25} color={"yellow"}></BsBrightnessHighFill>}
               </div>
         </ul>
 
         <div className="lg:hidden flex cursor-pointer">
-          {displayMenuBar === false ? currentMode === "light"? <MdOutlineDarkMode size={25} color={"purple"} className="mr-3" onClick={()=> toggleLightDarkMode()}></MdOutlineDarkMode> : <BsBrightnessHighFill size={25} color={currentMode === "light" ?"purple":"yellow"} className="mr-3" onClick={()=> toggleLightDarkMode()}></BsBrightnessHighFill> : null}
+          {displayMenuBar === false ? currentMode === "light"? <MdOutlineDarkMode size={25} color={"white"} className="mr-3" onClick={()=> toggleLightDarkMode()}></MdOutlineDarkMode> : <BsBrightnessHighFill size={25} color={"yellow"} className="mr-3" onClick={()=> toggleLightDarkMode()}></BsBrightnessHighFill> : null}
           {displayMenuBar? <FaTimes className='z-50' size={30} onClick={()=> toggleMenuBar()}></FaTimes> : <FaBars size={25} onClick={()=> toggleMenuBar()}></FaBars>}
         </div>
       </div>
 
         {displayMenuBar && ( 
-          <ul className='flex flex-col items-center fixed top-0 left-0 w-full h-screen pt-32 bg-purple-100 text-purple-900 dark:bg-purple-900 dark:text-white animate-fadeInLeft lg:hidden z-40'>
+          <ul className='flex flex-col items-center fixed top-0 left-0 w-full h-screen pt-32 bg-purple-300 dark:bg-purple-900 text-purple-900 dark:text-white animate-fadeInLeft lg:hidden z-40'>
             <Link to='/' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer font-bold italic'><i className="fa-solid fa-house"></i> HOME</li></Link>
             <Link to='/about' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer hover:animate-pulse'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></Link>
             <Link to='/work' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></Link>
