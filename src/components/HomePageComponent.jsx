@@ -8,7 +8,7 @@ const HomePageComponent = () => {
   const currentMode = useSelector(store => store.toggleLightDarkMode.currentMode);
   return (
     <div className={currentMode==="light"?"":"dark"}>
-        <div className="bg-purple-900 dark:bg-purple-100 w-full min-h-screen text-white dark:text-purple-950 flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 gap-8">
+        <div className="bg-purple-300 dark:bg-purple-900 w-full min-h-screen text-purple-950 dark:text-white flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 gap-8">
             {/* Text Column */}
             <div className="flex flex-col justify-center w-full lg:w-1/2 space-y-2 lg:space-y-4 lg:pt-20 xl:pt-16">
               {/* Greeting */}
@@ -17,14 +17,14 @@ const HomePageComponent = () => {
                   Hello <span className="animate-wave ml-1">👋</span>
                 </span>
                 <p className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-mulish animate-moveLine mt-1 md:mt-3 flex justify-center">
-                  I'm <b className="text-yellow-400 dark:text-yellow-500 ml-3">Sakshi Rastogi</b>
+                  I'm <b className="text-yellow-500 dark:text-yellow-400 ml-3">Sakshi Rastogi</b>
                 </p>
               </div>
 
               {/* Typewriter */}
               <div
                 className="flex flex-wrap justify-center lg:justify-start text-center
-                  font-bold text-lime-400 dark:text-lime-600 leading-snug 
+                  font-bold text-lime-600 dark:text-lime-400 leading-snug 
                   text-[clamp(1.2rem,2.5vw,2.3rem)] 
                   tracking-wide px-4 lg:px-20 xl:px-28 2xl:px-[110px]"
               >
