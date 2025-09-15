@@ -3,11 +3,11 @@ import { createSlice} from "@reduxjs/toolkit";
 const toggleLightDarkModeSlice = createSlice({
     name:"toggleLightDarkMode",
     initialState:{
-        currentMode:"light"
+        currentMode:"dark"
     },
     reducers:{
         toggleMode:(state) => {
-            state.currentMode = state.currentMode === "light"? "dark" : "light";
+            state.currentMode = state.currentMode === "dark"? "light" : "dark";
         }
     }
 })
