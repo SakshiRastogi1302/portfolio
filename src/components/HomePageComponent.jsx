@@ -8,7 +8,7 @@ const HomePageComponent = () => {
   const currentMode = useSelector(store => store.toggleLightDarkMode.currentMode);
   return (
     <div className={currentMode==="light"?"":"dark"}>
-        <div className="bg-purple-300 dark:bg-purple-900 w-full min-h-screen text-purple-950 dark:text-white flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 gap-8">
+        <div className="bg-purple-200 dark:bg-purple-900 w-full min-h-screen text-purple-950 dark:text-white flex flex-col-reverse lg:flex-row items-center justify-center p-4 lg:p-8 gap-8">
             {/* Text Column */}
             <div className="flex flex-col justify-center w-full lg:w-1/2 space-y-2 lg:space-y-4 lg:pt-20 xl:pt-16">
               {/* Greeting */}
@@ -49,8 +49,8 @@ const HomePageComponent = () => {
 
               {/* Buttons - Explore my work, Let's connect */}
               <div className = 'flex flex-col md:flex-row justify-center gap-5 items-center'>
-                <Link to= "/projects"><button title="Explore My Projects" className='w-40 md:w-44 bg-yellow-600 text-white font-medium p-2 rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer mt-5 border-2 border-white hover:bg-yellow-500 transition-transform'><i className="fa-solid fa-folder-open mr-2"></i>Explore My Work</button></Link>
-                <Link to= "/contact"><button title="Contact Me" className='w-40 md:w-44 bg-lime-600 text-white p-2 font-medium rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer md:mt-5 border-2 border-white hover:bg-lime-500 transition-transform"'><i className="fa-solid fa-phone mr-2"></i> Let's Connect</button></Link>
+                <Link to= "/projects"><button title="Explore My Projects" className='w-40 md:w-44 bg-yellow-600 text-black dark:text-white font-medium p-2 rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer mt-5 border-2 border-purple-950 dark:border-white hover:bg-yellow-500 transition-transform'><i className="fa-solid fa-folder-open mr-2"></i>Explore My Work</button></Link>
+                <Link to= "/contact"><button title="Contact Me" className='w-40 md:w-44 bg-lime-600 text-black dark:text-white p-2 font-medium rounded-lg flex justify-center items-center text-sm md:text-base cursor-pointer md:mt-5 border-2 border-purple-950 dark:border-white hover:bg-lime-500 transition-transform"'><i className="fa-solid fa-phone mr-2"></i> Let's Connect</button></Link>
               </div>
             </div>
 
