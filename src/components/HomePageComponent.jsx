@@ -25,8 +25,8 @@ const HomePageComponent = () => {
               <div
                 className="flex flex-wrap justify-center lg:justify-start text-center
                   font-bold text-lime-600 dark:text-lime-400 leading-snug 
-                  text-[clamp(1.2rem,2.5vw,2.3rem)] 
-                  tracking-wide px-4 lg:px-20 xl:px-28 2xl:px-[110px]"
+                  text-[clamp(1.2rem,2.3vw,2.3rem)] 
+                  tracking-wide px-4 lg:px-20 xl:px-28 2xl:px-[121px]"
               >
                 <Typewriter
                   options={{
