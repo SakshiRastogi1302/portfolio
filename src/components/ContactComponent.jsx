@@ -28,9 +28,9 @@ const ContactComponent = () => {
             <p className='text-justify font-normal mt-3 sm:mt-4 md:mt-5 text-base sm:text-lg md:text-xl animate-fadeIn'>Thank you for visiting my portfolio. If you’re interested in collaborating or discussing potential opportunities, please don’t hesitate to get in touch. I look forward to connecting with you.</p>
             <div className='mt-5'>
               <p className='text-lime-600 dark:text-lime-400 text-xs sm:text-sm md:text-lg flex-wrap xs:text-center lg:text-left'><i className="fa-solid fa-location-dot mr-2"></i>Location: <span className='font-bold text-yellow-500 dark:text-yellow-400 flex-wrap text-center'>Delhi, India</span></p>
-              <div className='w-full flex flex-col lg:flex-row sm:items-center lg:items-start sm:justify-center lg:justify-start'>
+              <div className='w-full flex flex-row sm:items-center lg:items-start justify-center lg:justify-start'>
                 <p className='text-lime-600 dark:text-lime-400 text-xs sm:text-sm md:text-lg text-center lg:text-left'><i className="fa-solid fa-envelope mr-2"></i>Email: <span className='font-bold text-yellow-500 dark:text-yellow-400 '>sakshi.dev2020@gmail.com</span></p>
-                <button onClick={handleCopy} title={copied?'Email copied':'Copy Email Address'} className='cursor-pointer mt-2 lg:mt-0 lg:ml-2 flex justify-center'>{copied? <Check className='text-green-400 rounded-full ml-2' title='Email Copied'></Check> : <Copy className='ml-2 w-4 md:w-6'></Copy>}</button>
+                <button onClick={handleCopy} title={copied?'Email copied':'Copy Email Address'} className='cursor-pointer lg:ml-2 flex justify-center'>{copied? <Check className='text-green-400 rounded-full ml-2' title='Email Copied'></Check> : <Copy className='ml-2 w-3 md:w-6'></Copy>}</button>
               </div>
             </div>
             <div className='flex justify-center lg:justify-start gap-4 mt-5 sm:mt-6 md:mt-7 pb-10'>
