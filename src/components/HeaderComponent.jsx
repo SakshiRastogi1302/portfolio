@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import portfolioNameLogo from "../assets/portfolio-name-logo.png"
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useDispatch, useSelector} from 'react-redux'
 import { toggleMenuButton } from '../redux_store/hideShowMenuSlice'
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -10,8 +10,7 @@ import { toggleMode } from '../redux_store/toggleLightDarkModeSlice'
 
 
 const HeaderComponent = () => {
-  const dispatch = useDispatch();
-  const displayMenuBar = useSelector(store => store.menuButton.isMenuOpen);
+  const dispatch = useDispatch();  const displayMenuBar = useSelector(store => store.menuButton.isMenuOpen);
   const currentMode = useSelector(store => store.toggleLightDarkMode.currentMode);  
 
 
@@ -31,33 +30,32 @@ const HeaderComponent = () => {
           <Link to='/'><h1 className='px-2 italic hidden lg:block font-medium'>Sakshi Rastogi</h1></Link>
         </div>
 
-        <ul className='hidden lg:flex lg:items-center lg:text-sm animate-fadeInDown font-medium'>
-              <Link to='/' className='hover:animate-pulse'><li className='pl-3 pr-6 py-2 cursor-pointer'><i className="fa-solid fa-house"></i> HOME</li></Link>
-              {/* {isHomeItemClicked ? (<p className='w-[72px] h-[3px] bg-gradient-to-br from-pink-400 via-indigo-300 to-green-500 ml-6 -mt-6'></p>) : null} */}
-              <Link to='/about' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></Link>
-              <Link to='/work' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></Link>
-              <Link to='/skills' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></Link>
-              <Link to='/projects' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></Link>
-              <Link to='/contact' className='hover:animate-pulse'><li className='px-6 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></Link>
-              <div className="cursor-pointer hover:animate-pulse" onClick={()=>{toggleLightDarkMode()}}>
-                {currentMode === "light"? <MdOutlineDarkMode size={25} color={"white"}></MdOutlineDarkMode> : <BsBrightnessHighFill size={25} color={"yellow"}></BsBrightnessHighFill>}
+        <ul className='hidden lg:flex lg:items-center text-xs animate-fadeInDown font-medium'>
+              <NavLink to='/' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ?'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-house"></i> HOME</li></NavLink>
+              <NavLink to='/about' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></NavLink>
+              <NavLink to='/work' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></NavLink>
+              <NavLink to='/skills' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></NavLink>
+              <NavLink to='/projects' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></NavLink>
+              <NavLink to='/contact' className={({isActive}) =>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></NavLink>
+              <div className="cursor-pointer hover:animate-pulse bg-black rounded-full p-2 m-2" onClick={()=>{toggleLightDarkMode()}}>
+                {currentMode === "light"? <MdOutlineDarkMode size={20} color={"white"}></MdOutlineDarkMode> : <BsBrightnessHighFill size={20} color={"yellow"}></BsBrightnessHighFill>}
               </div>
         </ul>
 
         <div className="lg:hidden flex cursor-pointer">
-          {displayMenuBar === false ? currentMode === "light"? <MdOutlineDarkMode size={25} color={"white"} className="mr-3" onClick={()=> toggleLightDarkMode()}></MdOutlineDarkMode> : <BsBrightnessHighFill size={25} color={"yellow"} className="mr-3" onClick={()=> toggleLightDarkMode()}></BsBrightnessHighFill> : null}
-          {displayMenuBar? <FaTimes className='z-50' size={30} onClick={()=> toggleMenuBar()}></FaTimes> : <FaBars size={25} onClick={()=> toggleMenuBar()}></FaBars>}
+          {displayMenuBar === false ? currentMode === "light"? <MdOutlineDarkMode size={45} color={"white"} className="mr-3 bg-black rounded-full p-2" onClick={()=> toggleLightDarkMode()}></MdOutlineDarkMode> : <BsBrightnessHighFill size={45} color={"yellow"} className="mr-3 bg-black rounded-full p-2" onClick={()=> toggleLightDarkMode()}></BsBrightnessHighFill> : null}
+          {displayMenuBar? <FaTimes className='z-50' size={30} onClick={()=> toggleMenuBar()}></FaTimes> : <FaBars size={35} onClick={()=> toggleMenuBar()} className='mt-1'></FaBars>}
         </div>
       </div>
 
         {displayMenuBar && ( 
-          <ul className='flex flex-col items-center fixed top-0 left-0 w-full h-screen pt-32 bg-purple-200 dark:bg-purple-900 text-purple-900 dark:text-white animate-fadeInLeft lg:hidden z-40'>
-            <Link to='/' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer font-bold italic'><i className="fa-solid fa-house"></i> HOME</li></Link>
-            <Link to='/about' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer hover:animate-pulse'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></Link>
-            <Link to='/work' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></Link>
-            <Link to='/skills' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></Link>
-            <Link to='/projects' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></Link>
-            <Link to='/contact' onClick={()=>toggleMenuBar()}><li className='p-6 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></Link>
+          <ul className='flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen text-xl bg-purple-200 dark:bg-purple-900 text-purple-900 dark:text-white animate-fadeInLeft lg:hidden z-40'>
+            <NavLink to='/' onClick={()=>toggleMenuBar()} className={({isActive})=>`${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer font-bold italic'><i className="fa-solid fa-house"></i> HOME</li></NavLink>
+            <NavLink to='/about' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer hover:animate-pulse'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></NavLink>
+            <NavLink to='/work' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></NavLink>
+            <NavLink to='/skills' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></NavLink>
+            <NavLink to='/projects' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></NavLink>
+            <NavLink to='/contact' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></NavLink>
           </ul>)}
     </div>
   )
