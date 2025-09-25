@@ -9,7 +9,7 @@ const ProjectListComponent = () => {
     <div className={currentMode==="light"?"":"dark"}>
       <div className='bg-purple-200 dark:bg-purple-900 text-white w-full min-h-screen flex flex-col items-center px-4 sm:px-6 lg:px-12'>
           <div className='mt-16 sm:mt-20 md:mt-24 lg:mt-24'>
-              <h1 className='text-3xl sm:text-4xl font-el-messiri font-bold tracking-wider text-purple-950 dark:text-white animate-moveDown text-shadow-lg text-shadow-black border-b-4 border-yellow-400 mt-5'>Projects</h1>
+              <h1 className='text-3xl sm:text-4xl font-el-messiri font-bold tracking-wider text-purple-950 dark:text-white animate-moveDown text-shadow-lg text-shadow-black border-b-4 border-yellow-400 mt-14 sm:mt-10 md:mt-5'>Projects</h1>
           </div>
           <div className="my-10 flex flex-wrap justify-center gap-6 w-full max-w-7xl">
               {projectData.map((project) => {
