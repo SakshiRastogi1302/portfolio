@@ -8,7 +8,7 @@ const ProjectComponent = ({projectInfo}) => {
     const iconClass = isCompleted ? "fa-solid fa-check mr-2 p-2 rounded-2xl bg-yellow-500" : "fa-solid fa-bars-progress mr-2 p-2 rounded-2xl bg-black";
 
     return(
-        <div className={`${id % 2===0?'animate-fadeInLeft':'animate-fadeInRight'} w-[90%] md:w-3/4 lg:w-[90%] bg-purple-500 border-2 border-white shadow-lg shadow-black rounded-lg flex flex-col lg:flex-row items-center lg:items-start mx-auto hover:scale-105 hover:shadow-xl transition-transform cursor-pointer`}>
+        <div className={`${id % 2===0?'animate-fadeInLeft':'animate-fadeInRight'} w-[90%] md:w-3/4 lg:w-[90%] bg-white dark:bg-purple-500 border-2 border-purple-950 dark:border-white shadow-lg shadow-black rounded-lg flex flex-col lg:flex-row items-center lg:items-start mx-auto hover:scale-105 hover:shadow-xl transition-transform cursor-pointer`}>
           <img src={imageURL} alt={'Project'+ projectInfo.id} loading='lazy' className='w-3/4 sm:w-2/3 md:w-1/2 lg:w-[50%] object-contain mt-5 lg:mt-8 mx-auto lg:mx-5 lg:mb-5 shadow-2xl shadow-black rounded-md'/>
           <div className='flex-1 my-5 px-4 sm:px-6 md:px-8'>
               <div className='flex flex-col justify-center items-center md:justify-between md:flex-row'>
@@ -21,7 +21,7 @@ const ProjectComponent = ({projectInfo}) => {
                   <span className="px-2 py-1 text-[10px] bg-indigo-700 text-white rounded-md font-medium">Deployed on Netlify</span>
               </div>
 
-              <p className='text-justify text-xs md:text-sm mt-4'>{projectDescription}</p>
+              <p className='text-justify text-xs md:text-sm mt-4 text-purple-950 dark:text-white'>{projectDescription}</p>
               <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-10'>
                   {technologyStack.map((technology, index) => {
                           return <button key={index} className='border-2 border-white text-black bg-yellow-400 text-[10px] sm:text-xs px-2 py-1 rounded-lg shadow-sm hover:bg-yellow-300'>{technology}</button>
