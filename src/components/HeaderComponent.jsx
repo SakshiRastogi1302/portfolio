@@ -31,12 +31,12 @@ const HeaderComponent = () => {
         </div>
 
         <ul className='hidden lg:flex lg:items-center text-xs animate-fadeInDown font-medium'>
-              <NavLink to='/' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ?'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-house"></i> HOME</li></NavLink>
-              <NavLink to='/about' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></NavLink>
-              <NavLink to='/work' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></NavLink>
-              <NavLink to='/skills' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></NavLink>
-              <NavLink to='/projects' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></NavLink>
-              <NavLink to='/contact' className={({isActive}) =>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></NavLink>
+              <NavLink to='/' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ?'bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-house"></i> HOME</li></NavLink>
+              <NavLink to='/about' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></NavLink>
+              <NavLink to='/work' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></NavLink>
+              <NavLink to='/skills' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></NavLink>
+              <NavLink to='/projects' className={({isActive})=>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></NavLink>
+              <NavLink to='/contact' className={({isActive}) =>`rounded-md p-2 hover:animate-pulse ${isActive ? 'bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='px-4 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></NavLink>
               <div className="cursor-pointer hover:animate-pulse bg-black rounded-full p-2 m-2" onClick={()=>{toggleLightDarkMode()}}>
                 {currentMode === "light"? <MdOutlineDarkMode size={20} color={"white"}></MdOutlineDarkMode> : <BsBrightnessHighFill size={20} color={"yellow"}></BsBrightnessHighFill>}
               </div>
@@ -50,12 +50,12 @@ const HeaderComponent = () => {
 
         {displayMenuBar && ( 
           <ul className='flex flex-col justify-center items-center fixed top-0 left-0 w-full h-screen text-xl bg-purple-200 dark:bg-purple-900 text-purple-900 dark:text-white animate-fadeInLeft lg:hidden z-40'>
-            <NavLink to='/' onClick={()=>toggleMenuBar()} className={({isActive})=>`${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer font-bold italic'><i className="fa-solid fa-house"></i> HOME</li></NavLink>
-            <NavLink to='/about' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer hover:animate-pulse'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></NavLink>
-            <NavLink to='/work' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></NavLink>
-            <NavLink to='/skills' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></NavLink>
-            <NavLink to='/projects' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></NavLink>
-            <NavLink to='/contact' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-600 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></NavLink>
+            <NavLink to='/' onClick={()=>toggleMenuBar()} className={({isActive})=>`${isActive ? 'rounded-md p-2 bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer font-bold italic'><i className="fa-solid fa-house"></i> HOME</li></NavLink>
+            <NavLink to='/about' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer hover:animate-pulse'><i className="fa-solid fa-lightbulb"></i> ABOUT</li></NavLink>
+            <NavLink to='/work' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-briefcase"></i> WORK EXPERIENCE</li></NavLink>
+            <NavLink to='/skills' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-list-check"></i> SKILLS</li></NavLink>
+            <NavLink to='/projects' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-file-powerpoint"></i> PROJECTS</li></NavLink>
+            <NavLink to='/contact' onClick={()=>toggleMenuBar()} className={({isActive}) => `${isActive ? 'rounded-md p-2 bg-yellow-500 dark:bg-yellow-400' : ''}`}><li className='p-6 cursor-pointer'><i className="fa-solid fa-envelope"></i> CONTACT ME</li></NavLink>
           </ul>)}
     </div>
   )
